@@ -1,0 +1,471 @@
+@import url(fonts.css);
+@import url(animation.css);
+
+:root {
+    /* background */
+    --primary-bg-color: #000;
+    /* --second-bg-color: #E5E5E5;
+    --third-bg-color: #FFCC80; */
+
+    /* glows color */
+    --primery-btn-glow: hsl(186 100% 69%);
+    --second-btn-glow: #B883FF;
+    
+    /* text */
+    --primary-text-color: #fff;
+    --welcome-text-color: #88ff55;
+    --primary-font: "Garet Book";
+    
+    /* border */   
+    --primary-border-color: #000;
+    --two-border-neon-color: #fff;
+    /* --second-border-color: #000; */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 1px;
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+body{
+    background: var(--primary-bg-color);
+    background: rgb(51,7,97);
+    background: linear-gradient(90deg, rgba(51,7,97,1) 0%, rgba(2,0,12,1) 30%, rgba(2,0,12,1) 70%, rgba(15,20,101,1) 100%);
+}
+.wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+/* ---------------------------------------- */
+/*                 main-btns                */
+/* ---------------------------------------- */
+.main-btns{
+    margin-bottom: 75rem;
+    display: flex;
+    justify-content: space-around;
+}
+.primary-btn {
+    padding: 15rem 35rem;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--primery-btn-glow);
+    background: none;
+    font-size: 18rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    border: 0.15em solid var(--primery-btn-glow);
+    border-radius: 0.45em;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--primery-btn-glow),
+        0px 0px 0.5em 0px var(--primery-btn-glow);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--primery-btn-glow),
+        0px 0px 0.5em 0px var(--primery-btn-glow);
+    box-shadow: inset 0px 0px 0.5em 0px var(--primery-btn-glow),
+        0px 0px 0.5em 0px var(--primery-btn-glow);
+    animation: border-flicker 1s reverse infinite;
+}
+.primary-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--primery-btn-glow);
+    box-shadow: 0 0 2rem 0.2rem var(--primery-btn-glow);
+    transition: opacity 100ms linear;
+}
+.primary-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+.primary-btn:hover:after {
+    opacity: 1;
+}
+/* ---------------------------------------- */
+/*              two-color-neon              */
+/* ---------------------------------------- */
+.two-color-neon{
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 5rem solid var(--two-border-neon-color);
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 20px 5px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 20px 5px var(--second-btn-glow),
+                1em 1em .4em black;
+}
+
+
+
+/* -------------------------------------------------------- */
+/*                          header                          */
+/* -------------------------------------------------------- */
+header{
+    margin-bottom: 50rem;
+    padding: 50rem 0;
+    text-align: center;
+    letter-spacing: 5rem;
+    text-transform: uppercase;
+    font-size: 20rem;
+}
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 75rem;
+    transform: translate(-50%, -50%);
+    animation: logo-flicker 1s;
+}
+.logo img{
+    width: 100%;
+}
+.header-txts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-txts p{
+    display: inline-block;
+}
+.header-txts p:first-child{
+    margin-bottom: 20rem;
+    font-size: 28rem;
+    letter-spacing: 10rem;
+    font-weight: bold;
+}
+
+
+
+/* -------------------------------------------------------- */
+/*                           index.html                     */
+/* -------------------------------------------------------- */
+/* ---------------------------------------- */
+/*             welcome-section              */
+/* ---------------------------------------- */
+.welcome-section{
+    margin-bottom: 50rem;
+    padding: 50rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Garet bolt";
+    font-size: 100rem;
+    color: var(--welcome-text-color);
+    border: 10rem solid var(--primary-border-color);
+    animation: welcome-border-sizing 1.5s infinite;
+}
+
+/* -------------------------------------------------------- */
+/*                           about.html                     */
+/* -------------------------------------------------------- */
+.about{
+    margin: 0  auto;
+    margin-bottom: 100rem;
+    padding: 35rem 50rem;
+    position: relative;
+    width: 75%;
+    font-size: 20rem;  
+}
+/* ---------------------------------------- */
+/*                  slider                  */
+/* ---------------------------------------- */
+.slider-next,
+.slider-prew{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100rem;
+    height: 75rem;
+    cursor: pointer;
+}
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slider-next{
+    top: 30%;
+    right: -150rem;
+    transform: translateY(-50%);
+}
+.arrow{
+    position: absolute;
+    top: 0;
+    left: 40rem;
+    width: 50rem;
+    height: 100rem;
+}
+.arrow:first-child{
+    left: 0;
+}
+.arrow:last-child{
+    left: 80rem;
+}
+.arrow span{
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 50px;
+    height: 12px;
+    background: orchid;
+    transform: rotate(45deg);
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0px 0px 0.5em 0px orchid;
+    -moz-box-shadow: 0px 0px 0.5em 0px orchid;
+    box-shadow: 0px 0px 0.5em 0px orchid;
+}
+.arrow span:last-child{
+    top: 43.3px;
+    transform: rotate(-45deg);
+}
+.slider-prew{
+    bottom: calc(0rem - 25rem);
+    left: -200rem;
+    transform: translateY(-50%);
+}
+.slider-prew .arrow{
+    transform: rotate(180deg);
+}
+.slider-prew .arrow span{
+    background: lightskyblue;
+
+    -webkit-box-shadow: 0px 0px 0.5em 0px lightskyblue;
+    -moz-box-shadow: 0px 0px 0.5em 0px lightskyblue;
+    box-shadow: 0px 0px 0.5em 0px lightskyblue;
+}
+/* ---------------------------------------- */
+/*                about-text                */
+/* ---------------------------------------- */
+.about-text h2{
+    margin-bottom: 20rem;
+    text-align: center;
+    font-size: 50rem;
+    font-weight: bold;
+}
+.about-text p{
+    margin-bottom: 35rem;
+    font-size: 30rem;
+}
+.about-text p:last-child{
+   margin-bottom: 0;
+}
+
+
+
+/* -------------------------------------------------------- */
+/*                          game.html                       */
+/* -------------------------------------------------------- */
+.try{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    width: 170rem;
+    height: 170rem;
+    font-size: 75rem;
+    font-family: "Squartiqa4F";
+    border: 5rem solid var(--second-btn-glow);
+    -webkit-box-shadow: inset 0 0 5rem 0 var(--second-btn-glow),
+                        0 0 5rem 0 var(--second-btn-glow);
+    -moz-box-shadow: inset 0 0 5rem 0 var(--second-btn-glow),
+                    0 0 5rem 0 var(--second-btn-glow);
+    box-shadow: inset 0 0 10rem 0 var(--second-btn-glow),
+                0 0 10rem 0 var(--second-btn-glow);
+    border-radius: 50%;
+    animation: border-flicker 2s linear infinite;
+}
+.main-layer{
+    color: var(--welcome-text-color);
+    z-index: 5;
+}
+.first-layer,
+.second-layer{
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+.first-layer{
+    right: 50%;
+    left: 40rem;
+    color: red;
+}
+.second-layer{
+    left: 50%;
+    right: -29rem;
+    bottom: 0;
+    color: hsl(186 100% 69%);
+    z-index: 4;
+}
+.slots{
+    margin: 0 auto;
+    width: 600rem;
+    height: 200rem;
+    background: red;
+}
+
+
+
+/* -------------------------------------------------------- */
+/*                       takePrize.html                     */
+/* -------------------------------------------------------- */
+.prize-wrapper{
+    width: 60%;
+}
+/* ---------------------------------------- */
+/*               prize-section              */
+/* ---------------------------------------- */
+.prize-section{
+    margin-bottom: 100rem;
+    padding: 45rem 50rem;
+}
+.take-prize-txt{
+    display: none;
+    text-align: center;
+    color: #9F3F73;
+    font-size: 55rem;
+    font-family: "Squartiqa4F";
+    -webkit-text-stroke: 1px #c56bfe;
+}
+
+
+
+/* -------------------------------------------------------- */
+/*                         media.css                        */
+/* -------------------------------------------------------- */
+@media screen and (max-width: 1080px){
+    html{
+        font-size: 1px;
+    }
+}
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 0.95px;
+    }
+}
+@media screen and (max-width: 1000px){
+    html{
+        font-size: 0.85px;
+    }
+}
+@media screen and (max-width: 960px){
+    html{
+        font-size: 0.75px;
+    }
+}
+@media screen and (max-width: 850px){
+    html{
+        font-size: 0.65px;
+    }
+    .arrow span{  
+        top: 16px;
+        width: 35px;
+        height: 7px;
+    }
+    .arrow span:last-child{
+        top: 36.3px;
+    }
+}
+@media screen and (max-width: 745px){
+    html{
+        font-size: 0.6px;
+    }
+    .arrow span{  
+        top: 16px;
+        width: 40px;
+        height: 8px;
+    }
+    .arrow span:last-child{
+        top: 39.3px;
+    }
+    .about-text h2{
+        font-size: 40rem;
+    }
+    .about-text p{
+        font-size: 26rem;
+    }
+}
+@media screen and (max-width: 685px){
+    .arrow span{  
+        top: 16px;
+        width: 30px;
+        height: 6px;
+    }
+    .arrow span:last-child{
+        top: 33.3px;
+    }
+}
+@media screen and (max-width: 600px){
+    .game-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        align-items: center;
+    }
+    .try{
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: scale(1.5);
+        order: 2;
+    }
+    .casino{
+        order: 1;
+        margin-bottom: 100rem;
+    }
+    .slider-prew .arrow:first-child{
+        display: none;
+    }
+    .slider-next .arrow:last-child{
+        display: none;
+    }
+    .arrow{
+        height: 80rem;
+    }
+}
+@media screen and (max-width: 545px){
+    html{
+        font-size: 0.5px;
+    }
+}
+@media screen and (max-width: 485px){
+    html{
+        font-size: 0.45px;
+    }
+    .about-text h2{
+        font-size: 40rem;
+    }
+    .about-text p{
+        font-size: 23rem;
+    }
+}
+@media screen and (max-width: 425px){
+    .arrow{
+        display: none;
+    }
+    .slider-prew .arrow:last-child{
+        display: block;
+    }
+    .slider-next .arrow:first-child{
+        display: block;
+    }
+}

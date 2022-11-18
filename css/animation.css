@@ -1,0 +1,142 @@
+@keyframes logo-flicker {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    50%,80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes welcome-border-sizing {
+    0% {
+        box-shadow:
+            0 0 0 0 var(--primary-border-color),
+            inset 0 0 0 0  var(--primary-border-color);
+    }
+    29.5% {
+        box-shadow:
+        0 0 0 11rem var(--primary-border-color),
+        inset 0 0 0 11rem var(--primary-border-color);
+    }
+    30% {
+        box-shadow:
+        0 0 0 10rem var(--primary-border-color),
+        inset 0 0 0 10rem var(--primary-border-color);
+    }
+    60% {
+        box-shadow:
+        0 0 0 5rem var(--primary-border-color),
+        inset 0 0 0 5rem var(--primary-border-color);
+    }
+    100%{
+        box-shadow:
+        0 0 0 0 var(--primary-border-color),
+        inset 0 0 0 0 var(--primary-border-color);
+    }
+}
+@keyframes shadow-flicker {
+ /* 0% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 20px 5px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 20px 5px var(--second-btn-glow),
+                1em 1em .4em black
+    } */
+  0% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 10px 1px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 10px 2px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+  4% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 20px 5px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 20px 5px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+  6% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 5px 1px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 10px 2px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+  8% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 20px 5px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 20px 5px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+  10% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 5px 1px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 10px 2px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+
+  70% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 15px 3px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 15px 4px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+  100% {
+    box-shadow: inset 0 0 0 4rem var(--second-btn-glow),
+                inset 0 0 20px 5px var(--second-btn-glow),
+                inset 1em 1em .4em black,
+                0 0 0 4rem var(--second-btn-glow),
+                0 0 20px 5px var(--second-btn-glow),
+                1em 1em .4em black
+  }
+}
