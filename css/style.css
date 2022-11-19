@@ -152,14 +152,33 @@ header{
 /* ---------------------------------------- */
 .welcome-section{
     margin-bottom: 150rem;
-    padding: 50rem 0;
+    padding: 50rem;
     text-align: center;
+    border: 15rem solid var(--primary-border-color);
+    animation: welcome-border-sizing 1.5s infinite;
+}
+.welcome-section h1{
+    position: relative;
+    overflow: hidden;
     text-transform: uppercase;
     font-family: "Garet bolt";
     font-size: 100rem;
+    /* color: transparent; */
     color: var(--welcome-text-color);
-    border: 15rem solid var(--primary-border-color);
-    animation: welcome-border-sizing 1.5s infinite;
+    /* opacity: 0; */
+    animation: welcome-text-show .7s ;
+}
+.welcome-section h1::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 80%;
+    height: 150rem;
+    transform: translateY(-50%);
+    background: var(--welcome-text-color);
+    opacity: 1;
+    animation: welcome-text-zip .7s ;
 }
 
 /* -------------------------------------------------------- */
@@ -244,6 +263,9 @@ header{
 /* ---------------------------------------- */
 /*                about-text                */
 /* ---------------------------------------- */
+.about-text{
+    overflow: hidden;
+}
 .about-text h2{
     margin-bottom: 20rem;
     text-align: center;
@@ -253,11 +275,23 @@ header{
 .about-text p{
     margin-bottom: 35rem;
     font-size: 30rem;
+    position: relative;
+}
+.slider-text-right{
+    animation: slidein-right 1s;
+}
+.slider-text-right-reverse{
+    animation: slidein-right 1s reverse;
+}
+.slider-text-left{
+    animation: slidein-left 1s;
+}
+.slider-text-left-reverce{
+    animation: slidein-left 1s reverse;
 }
 .about-text p:last-child{
    margin-bottom: 0;
 }
-
 
 
 /* -------------------------------------------------------- */
@@ -452,6 +486,9 @@ header{
     html{
         font-size: 0.45px;
     }
+    header{
+        margin-bottom: 150rem;
+    }
     .btns-block{
         flex-direction: column;  
         align-items: center;      
@@ -460,6 +497,9 @@ header{
         text-align: center;
         margin-bottom: 50rem;
         width: 500rem;
+    }
+    .primary-btn:last-child{
+        margin-bottom: 0;
     }
     .about-text h2{
         font-size: 40rem;

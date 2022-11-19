@@ -45,7 +45,27 @@
       opacity: 1;
     }
 }
-
+@keyframes welcome-text-show {
+    0%, 39%{
+        color: transparent;
+    }
+    40%, 100%{
+       color: var(--welcome-text-color);
+    }
+}
+@keyframes welcome-text-zip {
+    0% {
+        width: 0;
+        left: -100%;
+    }
+    50% {
+        width: 80%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
 @keyframes welcome-border-sizing {
     0% {
         box-shadow:
@@ -131,4 +151,22 @@
                 0 0 20px 5px var(--second-btn-glow),
                 1em 1em .4em black
   }
+
+  
+}
+@keyframes slidein-right {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes slidein-left {
+    from {
+        left: 300%;
+    }
+    to {
+        left: 0;
+    }
 }
