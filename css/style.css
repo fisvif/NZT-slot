@@ -45,9 +45,9 @@ body{
     width: 80%;
 }
 /* ---------------------------------------- */
-/*                 main-btns                */
+/*                 btns-block               */
 /* ---------------------------------------- */
-.main-btns{
+.btns-block{
     margin-bottom: 75rem;
     display: flex;
     justify-content: space-around;
@@ -60,7 +60,7 @@ body{
     text-decoration: none;
     color: var(--primery-btn-glow);
     background: none;
-    font-size: 18rem;
+    font-size: 25rem;
     font-weight: 900;
     letter-spacing: 1rem;
     border: 0.15em solid var(--primery-btn-glow);
@@ -77,14 +77,15 @@ body{
 .primary-btn::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
     opacity: 0;
     z-index: -1;
     background-color: var(--primery-btn-glow);
     box-shadow: 0 0 2rem 0.2rem var(--primery-btn-glow);
+    border-radius: 5px;
     transition: opacity 100ms linear;
 }
 .primary-btn:hover {
@@ -116,7 +117,7 @@ body{
 /*                          header                          */
 /* -------------------------------------------------------- */
 header{
-    margin-bottom: 50rem;
+    margin-bottom: 100rem;
     padding: 50rem 0;
     text-align: center;
     letter-spacing: 5rem;
@@ -134,14 +135,6 @@ header{
 .logo img{
     width: 100%;
 }
-.header-txts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.header-txts p{
-    display: inline-block;
-}
 .header-txts p:first-child{
     margin-bottom: 20rem;
     font-size: 28rem;
@@ -158,14 +151,14 @@ header{
 /*             welcome-section              */
 /* ---------------------------------------- */
 .welcome-section{
-    margin-bottom: 50rem;
+    margin-bottom: 150rem;
     padding: 50rem 0;
     text-align: center;
     text-transform: uppercase;
     font-family: "Garet bolt";
     font-size: 100rem;
     color: var(--welcome-text-color);
-    border: 10rem solid var(--primary-border-color);
+    border: 15rem solid var(--primary-border-color);
     animation: welcome-border-sizing 1.5s infinite;
 }
 
@@ -316,11 +309,16 @@ header{
     color: hsl(186 100% 69%);
     z-index: 4;
 }
-.slots{
+.slot-container{
+    background: green;
+    width: 550rem;
     margin: 0 auto;
-    width: 600rem;
-    height: 200rem;
+    margin-bottom: 100rem;
+}
+.slots{
     background: red;
+    width: 100%;
+    height: 560px;
 }
 
 
@@ -428,7 +426,7 @@ header{
         transform: scale(1.5);
         order: 2;
     }
-    .casino{
+    .slot-container{
         order: 1;
         margin-bottom: 100rem;
     }
@@ -446,10 +444,22 @@ header{
     html{
         font-size: 0.5px;
     }
+    .about-wrapper{
+        padding-top: 100rem;
+    }
 }
 @media screen and (max-width: 485px){
     html{
         font-size: 0.45px;
+    }
+    .btns-block{
+        flex-direction: column;  
+        align-items: center;      
+    }
+    .primary-btn{
+        text-align: center;
+        margin-bottom: 50rem;
+        width: 500rem;
     }
     .about-text h2{
         font-size: 40rem;
@@ -467,5 +477,10 @@ header{
     }
     .slider-next .arrow:first-child{
         display: block;
+    }
+}
+@media screen and (max-width: 375px){
+    .welcome-section{
+        font-size: 90rem;
     }
 }
