@@ -141,6 +141,9 @@ header{
     letter-spacing: 10rem;
     font-weight: bold;
 }
+.header-txts p:last-child{
+    margin: 0 auto;
+}
 
 
 
@@ -166,7 +169,7 @@ header{
     /* color: transparent; */
     color: var(--welcome-text-color);
     /* opacity: 0; */
-    animation: welcome-text-show .7s ;
+    animation: welcome-text-show .5s ;
 }
 .welcome-section h1::before{
     content: "";
@@ -178,7 +181,7 @@ header{
     transform: translateY(-50%);
     background: var(--welcome-text-color);
     opacity: 1;
-    animation: welcome-text-zip .7s ;
+    animation: welcome-text-zip .5s ;
 }
 
 /* -------------------------------------------------------- */
