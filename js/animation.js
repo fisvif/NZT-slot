@@ -4,7 +4,7 @@ var speed = 85; /* Скорость/длительность эффекта в �
 
 function typeWriter() {
     if (i < txt.length) {
-        document.querySelector(".text").innerHTML += txt.charAt(i);
+        document.querySelector(".logo-animation-text-two").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
     }
