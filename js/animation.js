@@ -1,6 +1,6 @@
 var i = 0;
-var txt = 'FIND OUT MORE ABOUT GAME'; /* Текст */
-var speed = 85; /* Скорость/длительность эффекта в миллисекундах */
+var txt = 'FIND OUT MORE ABOUT GAME';
+var speed = 125; /* швидкість в мілісекундах */
 
 function typeWriter() {
     if (i < txt.length) {
