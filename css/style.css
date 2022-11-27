@@ -48,7 +48,7 @@ body{
 /*                 btns-block               */
 /* ---------------------------------------- */
 .btns-block{
-    margin-bottom: 75rem;
+    margin-bottom: 50rem;
     display: flex;
     justify-content: space-around;
 }
@@ -335,15 +335,16 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
-    letter-spacing: 10rem;
+    letter-spacing: 5rem;
+    color: var(--welcome-text-color);
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 .first-layer{
-    filter: drop-shadow(-3rem 0 red);
+    filter: drop-shadow(-3.5rem 1.5rem red);
 }
 .second-layer{
-    filter: drop-shadow(3rem 0 hsl(186 100% 69%));
+    filter: drop-shadow(3.5rem -1.5rem hsl(186 100% 69%));
 }
 .slot-container{
     margin: 0 auto;
@@ -371,6 +372,17 @@ header{
     margin-bottom: 100rem;
     padding: 45rem 50rem;
 }
+header{ 
+    margin-bottom: 75rem;
+}
+.prize-section .about-text h2{
+    font-size: 40rem;
+    margin-bottom: 15rem;
+}
+.prize-section .about-text p{
+    font-size: 20rem;
+    margin-bottom: 25rem;
+}
 .take-prize-txt{
     display: none;
     text-align: center;
@@ -386,6 +398,14 @@ header{
 /*                         media.css                        */
 /* -------------------------------------------------------- */
 
+@media screen and (max-width: 1280px ){
+    html{
+        font-size: 0.90px;
+    }
+    header{
+        margin-bottom: 70rem;
+    }
+}
 @media screen and (max-width: 1280px ){
     html{
         font-size: 0.90px;
