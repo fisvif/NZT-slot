@@ -4,7 +4,7 @@ let takeBtn = document.querySelector('#takeBtn'),
     takeText = document.querySelector('.take-prize-txt');
 
     takeBtn.onclick = (event) => {
-        event.preventDafault();
+        event.preventDefault();
         takeText.style.display = 'block';
         prizeText.style.display = 'none';
         playBtn.style.display = 'none';
